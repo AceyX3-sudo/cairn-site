@@ -10,13 +10,13 @@
 <link rel="preload" href="assets/fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css">
 
-<!-- Social previews. PLACEHOLDER: replace REPLACE_ME_SITE_URL with your site's address,
+<!-- Social previews. PLACEHOLDER: replace https://aceyx3sudo.github.io/cairn-site with your site's address,
      e.g. https://yourname.github.io/cairn -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Cairn Linux">
 <meta property="og:description" content="Steady rolling Linux. Arch underneath, steady on top.">
-<meta property="og:url" content="REPLACE_ME_SITE_URL/">
-<meta property="og:image" content="REPLACE_ME_SITE_URL/assets/img/social-card.png">
+<meta property="og:url" content="https://aceyx3sudo.github.io/cairn-site/">
+<meta property="og:image" content="https://aceyx3sudo.github.io/cairn-site/assets/img/social-card.png">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
@@ -250,7 +250,7 @@ randomize_kstack_offset=on vsyscall=none debugfs=off</code></pre>
       <div class="release">
         <div>
           <!-- PLACEHOLDER: replace the file name with the real release, e.g. cairn-2026.10.20-x86_64.iso -->
-          <div class="file">cairn-YYYY.MM.DD-x86_64.iso</div>
+          <div class="file">cairn-2026.10.20-x86_64.iso</div>
           <dl>
             <div><dt>Size</dt><dd>about 2.4&nbsp;GB</dd></div>
             <div><dt>Architecture</dt><dd>x86_64</dd></div>
@@ -258,18 +258,18 @@ randomize_kstack_offset=on vsyscall=none debugfs=off</code></pre>
           </dl>
         </div>
         <div class="actions">
-          <!-- PLACEHOLDER: replace REPLACE_ME_ISO_URL with the direct link to the ISO -->
-          <a class="button" href="REPLACE_ME_ISO_URL">
+          <!-- PLACEHOLDER: replace https://sourceforge.net/projects/cairn-linux/files/cairn-2026.10.20-x86_64.iso/download with the direct link to the ISO -->
+          <a class="button" href="https://sourceforge.net/projects/cairn-linux/files/cairn-2026.10.20-x86_64.iso/download">
             <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3v10m0 0-4-4m4 4 4-4M4 16.5h12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             Download ISO
           </a>
-          <!-- PLACEHOLDER: replace REPLACE_ME_SHA256_URL with the link to the .sha256 file build.sh produces -->
-          <a class="small" href="REPLACE_ME_SHA256_URL">SHA256 file</a>
+          <!-- PLACEHOLDER: replace https://sourceforge.net/projects/cairn-linux/files/cairn-2026.10.20-x86_64.iso.sha256/download with the link to the .sha256 file build.sh produces -->
+          <a class="small" href="https://sourceforge.net/projects/cairn-linux/files/cairn-2026.10.20-x86_64.iso.sha256/download">SHA256 file</a>
         </div>
         <div class="checksum">
           <span class="label" id="sha-label">SHA256 checksum</span>
-          <!-- PLACEHOLDER: replace REPLACE_ME_SHA256 with the 64-character checksum -->
-          <div class="code"><pre aria-labelledby="sha-label"><code>REPLACE_ME_SHA256</code></pre></div>
+          <!-- PLACEHOLDER: replace 04131ce1cf6ff6bea1f8acf2a24e88a45dbae5deb05a484fd384b1db6fdd46c9 with the 64-character checksum -->
+          <div class="code"><pre aria-labelledby="sha-label"><code>04131ce1cf6ff6bea1f8acf2a24e88a45dbae5deb05a484fd384b1db6fdd46c9</code></pre></div>
         </div>
       </div>
 
@@ -287,13 +287,13 @@ randomize_kstack_offset=on vsyscall=none debugfs=off</code></pre>
           <h3>On Linux, with dd</h3>
           <p class="warn">Find the stick's name first, then write to the whole device (<code>/dev/sdX</code>, not <code>/dev/sdX1</code>). This erases the stick.</p>
           <div class="code"><pre><code>lsblk
-sudo dd if=cairn-YYYY.MM.DD-x86_64.iso of=/dev/sdX bs=4M status=progress oflag=sync</code></pre></div>
+sudo dd if=cairn-2026.10.20-x86_64.iso of=/dev/sdX bs=4M status=progress oflag=sync</code></pre></div>
           <h3>Check the download</h3>
           <div class="code"><pre><code><span class="c"># Linux, with the .sha256 file in the same folder</span>
-sha256sum -c cairn-YYYY.MM.DD-x86_64.iso.sha256
+sha256sum -c cairn-2026.10.20-x86_64.iso.sha256
 
 <span class="c"># Windows PowerShell: compare with the checksum above</span>
-Get-FileHash .\cairn-YYYY.MM.DD-x86_64.iso -Algorithm SHA256</code></pre></div>
+Get-FileHash .\cairn-2026.10.20-x86_64.iso -Algorithm SHA256</code></pre></div>
         </div>
       </div>
 
@@ -432,8 +432,8 @@ flatpak install flathub org.mozilla.Thunderbird</code></pre></div>
       <li><a href="#download">Download</a></li>
       <li><a href="#get-started">Getting started</a></li>
       <li><a href="#faq">Questions</a></li>
-      <!-- PLACEHOLDER: replace REPLACE_ME_SOURCE_URL with the project's source repository -->
-      <li><a href="REPLACE_ME_SOURCE_URL">Source code</a></li>
+      <!-- PLACEHOLDER: replace https://github.com/aceyx3sudo/cairn with the project's source repository -->
+      <li><a href="https://github.com/aceyx3sudo/cairn">Source code</a></li>
     </ul>
     <p class="legal">Cairn Linux is built on Arch Linux and is not an official Arch Linux project.</p>
   </div>
