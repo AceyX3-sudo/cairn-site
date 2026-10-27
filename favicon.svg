@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="28 40 200 200" width="64" height="64">
+  <title>Cairn Linux</title>
+  <!-- Four stacked stones: a trail marker that stays put. The amber cap stone is the accent. -->
+  <g transform="translate(0 -20)">
+  <ellipse cx="128" cy="204" rx="94" ry="31" fill="#56656F"/>
+  <ellipse cx="122" cy="156" rx="71" ry="25" fill="#788A96" transform="rotate(-4 122 156)"/>
+  <ellipse cx="133" cy="112" rx="51" ry="19" fill="#A2B0BA" transform="rotate(5 133 112)"/>
+  <ellipse cx="125" cy="76" rx="31" ry="14" fill="#E8A33D" transform="rotate(-7 125 76)"/>
+  </g>
+</svg>

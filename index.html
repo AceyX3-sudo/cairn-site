@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cairn Linux</title>
+<meta name="description" content="Cairn Linux is steady rolling Linux: Arch-based, 7 days behind Arch so breakage is fixed first, hardened by default, with btrfs snapshots you can boot from GRUB.">
+<meta name="theme-color" content="#0E1318">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+
+<!-- Social previews. PLACEHOLDER: replace REPLACE_ME_SITE_URL with your site's address,
+     e.g. https://yourname.github.io/cairn -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cairn Linux">
+<meta property="og:description" content="Steady rolling Linux. Arch underneath, steady on top.">
+<meta property="og:url" content="REPLACE_ME_SITE_URL/">
+<meta property="og:image" content="REPLACE_ME_SITE_URL/assets/img/social-card.png">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Cairn Linux home">
+      <img src="assets/img/logo.svg" alt="" width="34" height="34">
+      <span>Cairn Linux</span>
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="#why">Why Cairn</a></li>
+        <li class="optional"><a href="#screenshots">Screenshots</a></li>
+        <li class="optional"><a href="#desktops">Desktops</a></li>
+        <li><a href="#get-started">Get started</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#download">Download</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="wrap hero-copy">
+    <h1>
+      <span class="name">Cairn Linux</span>
+      <span class="tagline">steady rolling linux</span>
+    </h1>
+    <p class="lede">Arch underneath, steady on top. Cairn installs the Arch repositories as they were 7&nbsp;days ago, so most breakage is fixed before it reaches you. It ships hardened, and takes a snapshot before every change so you can roll back from the boot menu.</p>
+    <div class="hero-actions">
+      <a class="button" href="#download">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3v10m0 0-4-4m4 4 4-4M4 16.5h12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Download Cairn
+      </a>
+      <a class="text-link" href="#faq-updates">How updates work</a>
+    </div>
+    <p class="hero-note">64-bit ISO, about 2.4&nbsp;GB, boots to a live KDE Plasma desktop.</p>
+  </div>
+
+  <!-- The wallpaper's ridges and cairn (branding/wallpaper.svg), cropped to the lower half. -->
+  <svg class="hero-scene" viewBox="0 500 1920 510" preserveAspectRatio="xMaxYMax slice" aria-hidden="true" focusable="false">
+    <defs>
+      <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+        <stop offset="0" stop-color="#E8A33D" stop-opacity="0.35"/>
+        <stop offset="1" stop-color="#E8A33D" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <path d="M0 700 L180 610 L330 660 L520 540 L700 640 L860 580 L1040 660 L1230 520 L1420 620 L1600 560 L1780 640 L1920 590 L1920 1080 L0 1080 Z" fill="#26323B"/>
+    <path d="M0 800 L210 720 L400 770 L640 690 L860 780 L1080 720 L1300 790 L1500 730 L1720 800 L1920 750 L1920 1080 L0 1080 Z" fill="#1F2930"/>
+    <path d="M0 930 C300 880 700 870 1000 900 C1200 918 1300 860 1420 850 C1560 840 1700 880 1920 900 L1920 1080 L0 1080 Z" fill="#151C22"/>
+    <g transform="translate(1290 600)">
+      <circle class="cap-glow" cx="125" cy="76" r="120" fill="url(#glow)"/>
+      <ellipse cx="128" cy="204" rx="94" ry="31" fill="#3E4A53"/>
+      <ellipse cx="122" cy="156" rx="71" ry="25" fill="#56656F" transform="rotate(-4 122 156)"/>
+      <ellipse cx="133" cy="112" rx="51" ry="19" fill="#788A96" transform="rotate(5 133 112)"/>
+      <ellipse class="cap-stone" cx="125" cy="76" rx="31" ry="14" fill="#E8A33D" transform="rotate(-7 125 76)"/>
+    </g>
+  </svg>
+</div>
+
+<main id="main">
+
+  <!-- ============ WHY ============ -->
+  <section id="why">
+    <div class="wrap">
+      <div class="section-intro">
+        <h2>Why Cairn</h2>
+        <p>A cairn is a stack of stones hikers build to mark a safe trail. Cairn Linux is Arch Linux with a delay built in, rollback ready if something goes wrong, and hardening switched on.</p>
+      </div>
+
+      <ol class="stack">
+        <li>
+          <div class="stone" aria-hidden="true">
+            <svg viewBox="0 0 200 70"><ellipse cx="100" cy="35" rx="31" ry="14" fill="#E8A33D" transform="rotate(-7 100 35)"/></svg>
+          </div>
+          <div class="reason">
+            <h3>Stable, and still rolling</h3>
+            <p>Cairn doesn't take packages the moment Arch publishes them. <code>cairn-update</code> moves your system to a dated snapshot of the Arch repositories from <strong>7&nbsp;days earlier</strong>, so every package has spent a week in Arch first. Every Cairn machine on the same date has exactly the same packages, so partial upgrades can't happen.</p>
+            <ul class="points">
+              <li>Need a security fix today? <code>cairn-update --now</code> jumps to today's packages.</li>
+              <li>Before upgrading, it shows the Arch news posted since your current snapshot.</li>
+              <li>Runs the LTS kernel (<code>linux-lts</code>).</li>
+            </ul>
+          </div>
+        </li>
+
+        <li>
+          <div class="stone" aria-hidden="true">
+            <svg viewBox="0 0 200 70"><ellipse cx="100" cy="35" rx="51" ry="19" fill="#A2B0BA" transform="rotate(5 100 35)"/></svg>
+          </div>
+          <div class="reason">
+            <h3>Hardened by default</h3>
+            <p>The security work is done before you log in, and tuned so Flatpak, browser sandboxes and the NVIDIA driver still work.</p>
+            <ul class="points">
+              <li>AppArmor enabled at boot, with about 160 profiles.</li>
+              <li>An nftables firewall that drops unsolicited incoming connections.</li>
+              <li>A hardened kernel command line and kernel sysctl settings.</li>
+              <li>A locked root account; admin tasks go through <code>sudo</code>.</li>
+              <li>Optional LUKS2 full-disk encryption, with <code>/boot</code> inside it.</li>
+              <li>Privacy-minded networking: randomised Wi&#8209;Fi MAC addresses and IPv6 privacy addresses.</li>
+            </ul>
+            <details class="more">
+              <summary>See the details</summary>
+              <div class="body">
+                <p>Kernel command line:</p>
+                <pre><code>lsm=landlock,lockdown,yama,integrity,apparmor,bpf slab_nomerge
+init_on_alloc=1 init_on_free=1 page_alloc.shuffle=1
+randomize_kstack_offset=on vsyscall=none debugfs=off</code></pre>
+                <p>The sysctl file (<code>/etc/sysctl.d/90-cairn-hardening.conf</code>) hides kernel pointers and the kernel log, disables unprivileged BPF and kexec, restricts ptrace to a process's own children, adds symlink, hardlink and FIFO protections and more address-space randomisation, turns off ICMP redirects and source routing, and drops core dumps. Rare network protocols and obsolete filesystems can't be auto-loaded. Also installed: <code>usbguard</code>, <code>sbctl</code> for Secure Boot keys, <code>fwupd</code> for firmware updates and <code>tpm2-tools</code>.</p>
+                <p><strong>Left out on purpose:</strong> the <code>linux-hardened</code> kernel and disabling unprivileged user namespaces, because both break Flatpak and browser sandboxes. Kernel lockdown mode is also off, because it blocks the NVIDIA driver.</p>
+              </div>
+            </details>
+          </div>
+        </li>
+
+        <li>
+          <div class="stone" aria-hidden="true">
+            <svg viewBox="0 0 200 70"><ellipse cx="100" cy="35" rx="71" ry="25" fill="#788A96" transform="rotate(-4 100 35)"/></svg>
+          </div>
+          <div class="reason">
+            <h3>A bad update is one reboot away from fixed</h3>
+            <p>The system lives on btrfs. <code>snapper</code> and <code>snap-pac</code> take a snapshot before and after every package change, and <code>grub-btrfs</code> lists those snapshots in the boot menu. If an update breaks something, reboot, pick the snapshot from before it, and run <code>sudo snapper rollback</code> to keep it.</p>
+            <p>The installer also takes a "Fresh install" snapshot, so you can always get back to day one.</p>
+          </div>
+        </li>
+
+        <li>
+          <div class="stone" aria-hidden="true">
+            <svg viewBox="0 0 200 70"><ellipse cx="100" cy="35" rx="94" ry="31" fill="#56656F"/></svg>
+          </div>
+          <div class="reason">
+            <h3>Your software, your desktop</h3>
+            <p>You get all of the Arch repositories through <code>pacman</code>, plus Flatpak with Flathub, browsable in Discover on KDE. Plasma is the default and installs offline; GNOME, XFCE, Cinnamon, MATE, Budgie, LXQt and COSMIC are one choice away in the installer. <a href="#desktops">See the desktops</a>.</p>
+          </div>
+        </li>
+      </ol>
+
+      <dl class="inside" aria-label="What's inside">
+        <div>
+          <dt>Memory</dt>
+          <dd><span class="figure">About 570&nbsp;MB</span> at the login screen and <span class="figure">about 950&nbsp;MB</span> with Plasma logged in. Swap lives in compressed RAM (zram).</dd>
+        </div>
+        <div>
+          <dt>Graphics</dt>
+          <dd>Intel and AMD through Mesa and Vulkan. NVIDIA GTX&nbsp;16xx and newer through the open kernel driver; older NVIDIA cards use the installer's "nouveau" choice.</dd>
+        </div>
+        <div>
+          <dt>Firmware</dt>
+          <dd>Boots on UEFI and legacy BIOS. Firmware updates through <code>fwupd</code>.</dd>
+        </div>
+        <div>
+          <dt>Everyday hardware</dt>
+          <dd>Printing (CUPS), Bluetooth, and PipeWire audio work out of the box.</dd>
+        </div>
+        <div>
+          <dt>Virtual machines</dt>
+          <dd>Guest tools for VirtualBox, VMware, QEMU and Hyper&#8209;V are included. Each one only starts on its own hypervisor.</dd>
+        </div>
+        <div>
+          <dt>Software</dt>
+          <dd>Every Arch repository, including multilib, plus Flathub. Firefox, Dolphin, Kate, Konsole and Okular come with Plasma.</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ============ SCREENSHOTS ============ -->
+  <section id="screenshots">
+    <div class="wrap">
+      <div class="section-intro">
+        <h2>Screenshots</h2>
+      </div>
+      <div class="shots">
+        <figure>
+          <a href="assets/img/live-desktop.png"><img src="assets/img/live-desktop.webp" width="1280" height="800" alt="The Cairn live desktop: KDE Plasma with the dark ridge wallpaper and its glowing amber cairn, an Install Cairn icon at the top left, and a panel along the bottom." loading="lazy"></a>
+          <figcaption>The live desktop. Try Cairn from the USB stick, then double-click Install Cairn when you're ready.</figcaption>
+        </figure>
+        <div class="pair">
+          <figure>
+            <a href="assets/img/login-screen.png"><img src="assets/img/login-screen.webp" width="1280" height="800" alt="The Cairn login screen: a large clock, the user's name and a password field over a blurred version of the wallpaper." loading="lazy"></a>
+            <figcaption>The login screen, here with a German system language.</figcaption>
+          </figure>
+          <figure class="strip">
+            <img src="assets/img/grub-unlock.png" width="600" height="84" alt="Boot text ending in the GRUB prompt: Enter passphrase for hd0,gpt2." loading="lazy">
+            <figcaption>With full-disk encryption on, GRUB asks for your passphrase before anything else loads. Unlocking takes a few seconds, because GRUB only supports PBKDF2 key derivation.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DESKTOPS ============ -->
+  <section id="desktops">
+    <div class="wrap">
+      <div class="section-intro">
+        <h2>Pick your desktop</h2>
+        <p>Choose one in the installer. You can add others later with <code>pacman</code>.</p>
+      </div>
+      <div class="desktops">
+        <div class="default-desk">
+          <span class="tag">Default</span>
+          <h3>KDE Plasma</h3>
+          <p>The desktop on the live ISO, so it installs with no internet connection. Comes with Discover as the app store, plus Dolphin, Konsole, Kate, Okular, Gwenview, Spectacle and Firefox.</p>
+        </div>
+        <div>
+          <ul class="desk-list">
+            <li><b>GNOME</b><span>Focused, workflow-driven desktop</span></li>
+            <li><b>XFCE</b><span>Light and traditional</span></li>
+            <li><b>Cinnamon</b><span>Familiar taskbar-and-menu layout</span></li>
+            <li><b>MATE</b><span>The classic GNOME&nbsp;2 layout</span></li>
+            <li><b>Budgie</b><span>Simple, modern panel desktop</span></li>
+            <li><b>LXQt</b><span>Very light, built on Qt</span></li>
+            <li><b>COSMIC</b><span>System76's new desktop, written in Rust</span></li>
+          </ul>
+          <p class="desk-note">These are downloaded from the Arch repositories during installation, so they need an internet connection.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DOWNLOAD ============ -->
+  <section id="download">
+    <div class="wrap">
+      <div class="section-intro">
+        <h2>Download</h2>
+        <p>One ISO for every PC: it boots on UEFI and legacy BIOS, with drivers for Intel, AMD and NVIDIA graphics.</p>
+      </div>
+
+      <div class="release">
+        <div>
+          <!-- PLACEHOLDER: replace the file name with the real release, e.g. cairn-2026.10.20-x86_64.iso -->
+          <div class="file">cairn-YYYY.MM.DD-x86_64.iso</div>
+          <dl>
+            <div><dt>Size</dt><dd>about 2.4&nbsp;GB</dd></div>
+            <div><dt>Architecture</dt><dd>x86_64</dd></div>
+            <div><dt>Live desktop</dt><dd>KDE Plasma</dd></div>
+          </dl>
+        </div>
+        <div class="actions">
+          <!-- PLACEHOLDER: replace REPLACE_ME_ISO_URL with the direct link to the ISO -->
+          <a class="button" href="REPLACE_ME_ISO_URL">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3v10m0 0-4-4m4 4 4-4M4 16.5h12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Download ISO
+          </a>
+          <!-- PLACEHOLDER: replace REPLACE_ME_SHA256_URL with the link to the .sha256 file build.sh produces -->
+          <a class="small" href="REPLACE_ME_SHA256_URL">SHA256 file</a>
+        </div>
+        <div class="checksum">
+          <span class="label" id="sha-label">SHA256 checksum</span>
+          <!-- PLACEHOLDER: replace REPLACE_ME_SHA256 with the 64-character checksum -->
+          <div class="code"><pre aria-labelledby="sha-label"><code>REPLACE_ME_SHA256</code></pre></div>
+        </div>
+      </div>
+
+      <div class="writers">
+        <div>
+          <h3>On Windows, with Rufus</h3>
+          <ol>
+            <li>Open <a href="https://rufus.ie/">Rufus</a>, pick your USB stick and the Cairn ISO.</li>
+            <li>Keep the partition scheme at <strong>GPT</strong>.</li>
+            <li>Click Start. When Rufus says "ISOHybrid image detected", choose <strong>Write in DD Image mode</strong>. ISO mode won't boot.</li>
+          </ol>
+          <p class="warn">Writing the stick erases everything on it.</p>
+        </div>
+        <div>
+          <h3>On Linux, with dd</h3>
+          <p class="warn">Find the stick's name first, then write to the whole device (<code>/dev/sdX</code>, not <code>/dev/sdX1</code>). This erases the stick.</p>
+          <div class="code"><pre><code>lsblk
+sudo dd if=cairn-YYYY.MM.DD-x86_64.iso of=/dev/sdX bs=4M status=progress oflag=sync</code></pre></div>
+          <h3>Check the download</h3>
+          <div class="code"><pre><code><span class="c"># Linux, with the .sha256 file in the same folder</span>
+sha256sum -c cairn-YYYY.MM.DD-x86_64.iso.sha256
+
+<span class="c"># Windows PowerShell: compare with the checksum above</span>
+Get-FileHash .\cairn-YYYY.MM.DD-x86_64.iso -Algorithm SHA256</code></pre></div>
+        </div>
+      </div>
+
+      <p class="callout"><strong>Turn off Secure Boot</strong> in your PC's firmware settings before booting the stick. The ISO isn't signed. Once Cairn is installed, you can sign it with your own keys using <code>sbctl</code>.</p>
+    </div>
+  </section>
+
+  <!-- ============ GETTING STARTED ============ -->
+  <section id="get-started">
+    <div class="wrap">
+      <div class="section-intro">
+        <h2>Getting started</h2>
+      </div>
+      <ol class="steps">
+        <li>
+          <div class="step-body">
+            <h3>Install</h3>
+            <p>Boot from the USB stick and the Plasma live desktop starts. Double-click <strong>Install Cairn</strong>. The guided installer runs in a terminal window and asks for the disk, encryption, your user, time zone, language, keyboard, desktop and NVIDIA driver. It then copies the system to disk, sets up btrfs, zram swap and GRUB, and takes a "Fresh install" snapshot.</p>
+            <p>The installer uses the whole disk, so back up anything on it first.</p>
+          </div>
+        </li>
+        <li>
+          <div class="step-body">
+            <h3>Update with cairn-update</h3>
+            <p>After the first boot, run <code>cairn-update</code> once to download the package databases. After that, run it whenever you want to update.</p>
+            <div class="code"><pre><code>cairn-update            <span class="c"># go to the snapshot from 7 days ago</span>
+cairn-update --now      <span class="c"># today's packages, for an urgent security fix</span>
+cairn-update --status   <span class="c"># which snapshot you're on</span>
+cairn-update --news     <span class="c"># Arch news since your snapshot</span></code></pre></div>
+          </div>
+        </li>
+        <li>
+          <div class="step-body">
+            <h3>Install apps</h3>
+            <p>Open Discover to browse apps, including Flatpaks from Flathub. In a terminal, use <code>pacman</code> for anything in the Arch repositories, or <code>flatpak</code> for Flathub.</p>
+            <div class="code"><pre><code>sudo pacman -S gimp
+flatpak install flathub org.mozilla.Thunderbird</code></pre></div>
+          </div>
+        </li>
+        <li>
+          <div class="step-body">
+            <h3>Roll back a bad update</h3>
+            <ol>
+              <li>Reboot, and open the snapshots entry in the GRUB menu.</li>
+              <li>Pick the "pre" snapshot taken just before the update, and boot it.</li>
+              <li>If everything works, make it permanent with <code>sudo snapper rollback</code> and reboot.</li>
+            </ol>
+            <p>Run <code>snapper list</code> at any time to see every snapshot and what took it.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-intro">
+        <h2>Questions</h2>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>How is Cairn different from Arch?</summary>
+          <div class="answer">
+            <p>Cairn uses the same Arch packages. What changes is when you get them, what happens if one breaks, and what's set up before you log in.</p>
+            <div class="table-scroll">
+              <table>
+                <thead><tr><th scope="col"></th><th scope="col">Arch Linux</th><th scope="col">Cairn Linux</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Packages</th><td>Arch repos</td><td class="cairn">Same Arch repos, multilib, Flathub in Discover, AUR via <code>base-devel</code></td></tr>
+                  <tr><th scope="row">Updates</th><td>The moment they're published</td><td class="cairn">A dated snapshot 7 days behind Arch</td></tr>
+                  <tr><th scope="row">Kernel</th><td><code>linux</code></td><td class="cairn"><code>linux-lts</code></td></tr>
+                  <tr><th scope="row">If an update breaks</th><td>Fix it by hand</td><td class="cairn">Reboot, pick the pre-update snapshot in GRUB</td></tr>
+                  <tr><th scope="row">Firewall</th><td>None</td><td class="cairn">nftables: block inbound, allow outbound</td></tr>
+                  <tr><th scope="row">Hardening</th><td>Defaults</td><td class="cairn">AppArmor, sysctl and kernel command line hardening, module blacklist, no core dumps, locked root, MAC randomisation</td></tr>
+                  <tr><th scope="row">Install</th><td>By hand</td><td class="cairn">Guided installer, offline with Plasma, full-disk encryption</td></tr>
+                  <tr><th scope="row">Desktop</th><td>None</td><td class="cairn">KDE Plasma 6, or one of seven others</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </details>
+
+        <details>
+          <summary>Can I use the AUR?</summary>
+          <div class="answer">
+            <p>Yes. <code>base-devel</code> is installed, so you can build AUR packages with <code>makepkg</code> or install the AUR helper you like. Cairn doesn't ship one.</p>
+            <p>The AUR follows current Arch, while your system is 7&nbsp;days behind it. If an AUR package needs a newer library than your snapshot has, run <code>cairn-update --now</code> first, or wait for the next regular update.</p>
+          </div>
+        </details>
+
+        <details id="faq-updates">
+          <summary>How do updates work?</summary>
+          <div class="answer">
+            <p>pacman doesn't read a live mirror. It reads the <a href="https://wiki.archlinux.org/title/Arch_Linux_Archive">Arch Linux Archive</a> for one fixed date. <code>cairn-update</code> moves that date forward to 7&nbsp;days ago, so every package has spent a week in Arch first, and most breakage gets reported and fixed in that time.</p>
+            <p>Because the date is frozen, the whole system moves together: every Cairn machine on the same date has exactly the same packages, and <code>pacman -Sy</code> is safe here, unlike on Arch. Before upgrading, <code>cairn-update</code> prints the Arch news posted since your snapshot, which is where Arch announces any manual steps. Snapper takes a snapshot before and after the upgrade.</p>
+            <p>Package files download from fast regular Arch mirrors where possible. The package list always comes from the dated snapshot, and every package is signed, so a mirror can't change what you get. The lag is set by <code>LAG_DAYS</code> in <code>/etc/cairn/update.conf</code>.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Does that mean security fixes arrive late?</summary>
+          <div class="answer">
+            <p>By default, yes, by 7&nbsp;days. <code>cairn-update</code> warns you when there's Arch news newer than the date it's moving to. When a fix can't wait, <code>cairn-update --now</code> takes today's packages.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Can I dual-boot?</summary>
+          <div class="answer">
+            <p>Not on the same disk. The installer always uses the whole disk. If another operating system is on a different disk, GRUB finds it and adds it to the boot menu.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Does Cairn work with Secure Boot?</summary>
+          <div class="answer">
+            <p>Turn Secure Boot off to boot the ISO, because it isn't signed. <code>sbctl</code> is installed, so you can enroll your own keys and sign the installed system afterwards.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="#top">
+        <img src="assets/img/logo.svg" alt="" width="30" height="30">
+        <span>Cairn Linux</span>
+      </a>
+      <p class="foot-tag">steady rolling linux</p>
+    </div>
+    <ul>
+      <li><a href="#download">Download</a></li>
+      <li><a href="#get-started">Getting started</a></li>
+      <li><a href="#faq">Questions</a></li>
+      <!-- PLACEHOLDER: replace REPLACE_ME_SOURCE_URL with the project's source repository -->
+      <li><a href="REPLACE_ME_SOURCE_URL">Source code</a></li>
+    </ul>
+    <p class="legal">Cairn Linux is built on Arch Linux and is not an official Arch Linux project.</p>
+  </div>
+</footer>
+
+<script>
+  // Copy buttons for code blocks. The page works fine without this.
+  document.querySelectorAll(".code").forEach(function (box) {
+    var code = box.querySelector("code");
+    if (!code || !navigator.clipboard) return;
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "copy";
+    btn.textContent = "Copy";
+    btn.addEventListener("click", function () {
+      var text = code.innerText.split("\n")
+        .filter(function (l) { return !/^\s*#/.test(l); })
+        .map(function (l) { return l.replace(/\s+#.*$/, ""); })
+        .join("\n").trim();
+      navigator.clipboard.writeText(text).then(function () {
+        btn.textContent = "Copied";
+        setTimeout(function () { btn.textContent = "Copy"; }, 1600);
+      }, function () {
+        var r = document.createRange(); r.selectNodeContents(code);
+        var s = getSelection(); s.removeAllRanges(); s.addRange(r);
+      });
+    });
+    box.appendChild(btn);
+  });
+</script>
+</body>
+</html>
