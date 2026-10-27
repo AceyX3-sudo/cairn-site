@@ -249,8 +249,8 @@ randomize_kstack_offset=on vsyscall=none debugfs=off</code></pre>
 
       <div class="release">
         <div>
-          <!-- PLACEHOLDER: replace the file name with the real release, e.g. cairn-2026.10.20-x86_64.iso -->
-          <div class="file">cairn-2026.10.20-x86_64.iso</div>
+          <!-- PLACEHOLDER: replace the file name with the real release, e.g. cairn-2026.10.24-x86_64.iso -->
+          <div class="file">cairn-2026.10.24-x86_64.iso</div>
           <dl>
             <div><dt>Size</dt><dd>about 2.4&nbsp;GB</dd></div>
             <div><dt>Architecture</dt><dd>x86_64</dd></div>
@@ -258,13 +258,13 @@ randomize_kstack_offset=on vsyscall=none debugfs=off</code></pre>
           </dl>
         </div>
         <div class="actions">
-          <!-- PLACEHOLDER: replace https://sourceforge.net/projects/cairn-linux/files/cairn-2026.10.20-x86_64.iso/download with the direct link to the ISO -->
-          <a class="button" href="https://sourceforge.net/projects/cairn-linux/files/cairn-2026.10.20-x86_64.iso/download">
+          <!-- PLACEHOLDER: replace https://sourceforge.net/projects/cairn-linux/files/cairn-2026.10.24-x86_64.iso/download with the direct link to the ISO -->
+          <a class="button" href="https://sourceforge.net/projects/cairn-linux/files/cairn-2026.10.24-x86_64.iso/download">
             <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3v10m0 0-4-4m4 4 4-4M4 16.5h12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             Download ISO
           </a>
-          <!-- PLACEHOLDER: replace https://sourceforge.net/projects/cairn-linux/files/cairn-2026.10.20-x86_64.iso.sha256/download with the link to the .sha256 file build.sh produces -->
-          <a class="small" href="https://sourceforge.net/projects/cairn-linux/files/cairn-2026.10.20-x86_64.iso.sha256/download">SHA256 file</a>
+          <!-- PLACEHOLDER: replace https://sourceforge.net/projects/cairn-linux/files/cairn-2026.10.24-x86_64.iso.sha256/download with the link to the .sha256 file build.sh produces -->
+          <a class="small" href="https://sourceforge.net/projects/cairn-linux/files/cairn-2026.10.24-x86_64.iso.sha256/download">SHA256 file</a>
         </div>
         <div class="checksum">
           <span class="label" id="sha-label">SHA256 checksum</span>
@@ -287,13 +287,13 @@ randomize_kstack_offset=on vsyscall=none debugfs=off</code></pre>
           <h3>On Linux, with dd</h3>
           <p class="warn">Find the stick's name first, then write to the whole device (<code>/dev/sdX</code>, not <code>/dev/sdX1</code>). This erases the stick.</p>
           <div class="code"><pre><code>lsblk
-sudo dd if=cairn-2026.10.20-x86_64.iso of=/dev/sdX bs=4M status=progress oflag=sync</code></pre></div>
+sudo dd if=cairn-2026.10.24-x86_64.iso of=/dev/sdX bs=4M status=progress oflag=sync</code></pre></div>
           <h3>Check the download</h3>
           <div class="code"><pre><code><span class="c"># Linux, with the .sha256 file in the same folder</span>
-sha256sum -c cairn-2026.10.20-x86_64.iso.sha256
+sha256sum -c cairn-2026.10.24-x86_64.iso.sha256
 
 <span class="c"># Windows PowerShell: compare with the checksum above</span>
-Get-FileHash .\cairn-2026.10.20-x86_64.iso -Algorithm SHA256</code></pre></div>
+Get-FileHash .\cairn-2026.10.24-x86_64.iso -Algorithm SHA256</code></pre></div>
         </div>
       </div>
 
